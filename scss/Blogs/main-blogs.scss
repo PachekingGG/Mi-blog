@@ -1,0 +1,191 @@
+@import "../mixins.scss";
+@import "../variables.scss";
+
+
+.main-blogs {
+    @include flexCenter (column, flex-start, center);
+    width: 100%;
+    min-height: calc(100vh - 14.4rem);
+    min-width: 30rem;
+    padding-top: 8rem;
+}
+.main-blogs__section-1 {
+    @include flexCenter (row, center, center);
+    width: 100%;
+    padding: 0.8rem 2rem 2rem 2rem;
+    background-color: $light-color;
+}
+.section-1__container {
+    @include flexCenter (column, center, center);
+    row-gap: 2rem;
+    max-width: 100rem;
+    .container__div-1 {
+        @include flexCenter (column);
+        row-gap: 0.6rem;
+        width: 100%;
+        h3 {
+            font-size: 1.3rem;
+        }
+        img {
+            width: 100%;
+        }
+    }
+    .container__div-2 {
+        @include flexCenter (column, center, flex-start);
+        row-gap: 2rem;
+        h2 {
+            font-size: 1.6rem;
+        }
+        p {
+            font-size: 1.2rem;
+        }
+        a {
+            align-self: center;
+        }
+    }
+}
+
+.main-blogs__section-2 {
+    @include flexCenter (column, flex-start, center);
+    width: 100%;
+    min-width: 30rem;
+    padding: 3.4rem 2.6rem 5rem 2.6rem;
+    h3 {
+        text-align: center;
+        font-size: 1.4rem;
+        padding-bottom: 2rem;
+        border-bottom: 1px solid $light-color;
+        width: 100%;
+    }
+}
+.section-2__container {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(16rem, 1fr));
+    column-gap: 2rem;
+    row-gap: 3rem;
+    width: 100%;
+    max-width: 100rem;
+    padding-top: 2.4rem;
+    .blog {
+        @include flexCenter (column);
+        row-gap: 1.4rem;
+        width: 100%;
+        min-width: 16rem;
+        img {
+            width: 100%;
+        }
+        &__text {
+            @include flexCenter (column);
+            row-gap: 1rem;
+            .blog-title {
+                font-size: 1.4rem;
+            }
+            p {
+                font-size: 1.1rem;
+            }
+        }
+        .secundary-button {
+            margin-top: auto;
+        }
+    }
+}
+//TABLET
+@media (min-width: 768px) {
+    .main-blogs {
+        padding-top: 12rem;
+    }
+    .main-blogs__section-1 {
+        padding: 1rem 3rem 3rem 3rem;
+    }
+    .section-1__container {
+        @include flexCenter (row, center, center);
+        column-gap: 3rem;
+        .container__div-1 {
+            row-gap: 0.8rem;
+            width: 60%;
+            h3 {
+                font-size: 1.4rem;
+            }
+        }
+        .container__div-2 {
+            @include flexCenter (column, center, flex-start);
+            row-gap: 2rem;
+            width: 40%;
+            h2 {
+                font-size: 2.4rem;
+            }
+            p {
+                font-size: 1.4rem;
+            }
+            a {
+                align-self: flex-start;
+            }
+        }
+    }
+    .main-blogs__section-2 {
+        padding: 3.4rem 3rem 5rem 3rem;
+        h3 {
+            font-size: 1.6rem;
+            padding-bottom: 2rem;
+        }
+    }
+    .section-2__container {
+        grid-template-columns: repeat(auto-fit, minmax(23rem, 1fr));
+        column-gap: 3rem;
+        row-gap: 3rem;
+        width: 100%;
+        padding-top: 2.4rem;
+        .blog {
+            @include flexCenter (column, flex-start, flex-start);
+            row-gap: 1.4rem;
+            width: 100%;
+            min-width: 23rem;
+            img {
+                width: 100%;
+            }
+            &__text {
+                @include flexCenter (column, flex-start, flex-start);
+                row-gap: 1rem;
+                .blog-title {
+                    font-size: 1.4rem;
+                }
+                p {
+                    font-size: 1.1rem;
+                }
+            }
+        }
+    }
+}
+
+
+//DESKTOP
+@media (min-width: 1024px) {
+    .main-blogs {
+        padding-top: 14rem;
+    }
+    .main-blogs__section-1 {
+        padding: 1.6rem 4rem 4rem 4rem;
+    }
+    .section-1__container {
+        @include flexCenter (row, center, center);
+        column-gap: 3.6rem;
+        .container__div-1 {
+            row-gap: 0.8rem;
+            width: 55%;
+            h3 {
+                font-size: 1.5rem;
+            }
+        }
+        .container__div-2 {
+            @include flexCenter (column, center, flex-start);
+            row-gap: 2rem;
+            width: 45%;
+            h2 {
+                font-size: 3.6rem;
+            }
+            p {
+                font-size: 1.6rem;
+            }
+        }
+    }
+}

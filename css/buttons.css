@@ -1,0 +1,63 @@
+.primary-button {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  text-decoration: none;
+  font-family: "Roboto Mono", monospace;
+  font-weight: 700;
+  font-size: 1.6rem;
+  color: #e6e9ed;
+  width: 12rem;
+  height: 4.8rem;
+  background-color: #48cfad;
+  border: 2px solid #48cfad;
+  color: #23282d;
+  cursor: pointer;
+}
+.primary-button:hover {
+  border: 2px solid #48cfad;
+  color: #48cfad;
+  background-color: transparent;
+}
+
+@media (min-width: 768px) {
+  .primary-button {
+    font-size: 1.7rem;
+    width: 14rem;
+    height: 5rem;
+  }
+}
+@media (min-width: 1024px) {
+  .primary-button {
+    font-size: 1.8rem;
+    width: 15rem;
+    height: 5.4rem;
+  }
+}
+.secundary-button {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  font-weight: 500;
+  font-size: 1.1rem;
+  border: 1px solid #48cfad;
+  color: #23282d;
+  background-color: transparent;
+  text-decoration: none;
+  width: 10rem;
+  height: 3.4rem;
+}
+.secundary-button:hover {
+  background-color: #48cfad;
+  color: #e6e9ed;
+}
+
+@media (min-width: 1024px) {
+  .secundary-button {
+    font-size: 1.2rem;
+    width: 12rem;
+    height: 4rem;
+  }
+}/*# sourceMappingURL=buttons.css.map */

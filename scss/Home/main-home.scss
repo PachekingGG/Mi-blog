@@ -1,0 +1,47 @@
+@import "../mixins.scss";
+@import "../variables.scss";
+.main-home {
+    @include flexCenter (column, center, center);
+    width: 100%;
+    min-width: 30rem;
+    height: calc(100vh - 6.4rem);
+    padding: 0 3rem;
+    background-image: url(../assets/Imágenes/franck-v-JjGXjESMxOY-unsplash.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    &__div {
+        @include flexCenter (column, center, center);
+        min-width: 25rem;
+        max-width: 60rem;
+        row-gap: 2.8rem;
+        p {
+            text-align: center;
+            font-family: $roboto;
+            font-weight: 700;
+            font-size: 3rem;
+            color: $light-color;
+        }
+    }
+}
+
+//TABLET
+@media (min-width: 768px) {
+    .main-home {
+        background-image: url(../assets/Imágenes/cover-medium.png);
+       &__div {
+            p {
+                font-size: 3.2rem;
+            }
+        }
+    }
+}
+
+//DESKTOP
+@media (min-width: 1024px) {
+    .main-home__div {
+        p {
+            font-size: 3.8rem;
+        }
+    }
+}

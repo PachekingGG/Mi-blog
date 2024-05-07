@@ -1,0 +1,182 @@
+@import "../mixins.scss";
+@import "../variables.scss";
+
+.main-profile {
+    @include flexCenter (column, flex-start, center);
+    min-width: 30rem;
+    padding-top: 8rem;
+    width: 100%;
+    min-height: calc(100vh - 39.4rem);
+}
+.main-profile__section {
+    @include flexCenter (row, center, center);
+    width: 100%;
+    padding: 2rem;
+    background-color: $light-color;
+}
+.main-profile__section__container {
+    @include flexCenter (column, center, center);
+    row-gap: 2rem;
+    max-width: 100rem;
+    img {
+        width: 100%;
+    }
+    .container__div {
+        @include flexCenter (column, center, flex-start);
+        row-gap: 2rem;
+        h2 {
+            font-size: 1.6rem;
+        }
+        p {
+            font-size: 1.2rem;
+        }
+    }
+}
+.main-profile__section-2 {
+    @include flexCenter (column, flex-start, center);
+    width: 100%;
+    max-width: 108rem;
+    min-width: 30rem;
+    padding: 3.4rem 2.6rem 7rem 2.6rem;
+    h3 {
+        text-align: center;
+        font-size: 1.4rem;
+        padding-bottom: 2rem;
+        border-bottom: 1px solid $light-color;
+        width: 100%;
+    }
+}
+.main-profile__section-2__container {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(24rem, 1fr));
+    column-gap: 4rem;
+    row-gap: 3rem;
+    width: 100%;
+    max-width: 100rem;
+    padding-top: 3.4rem;
+    .main-profile__project {
+        @include flexCenter (column);
+        width: 100%;
+        min-width: 24rem;
+        box-shadow: $light-color 0px 3px 15px 1px;
+        border-radius: 0.4rem;
+        overflow: hidden;
+        &:hover {
+            transform: scale(1.05);
+            transition-duration: 0.2s;
+        }
+        a {
+            width: 100%;
+            text-decoration: none;
+            color: $dark-color;
+            img {
+                width: 100%;
+                height: 17rem;
+                object-fit: cover;
+            }
+        }
+        .project__text {
+            @include flexCenter (column);
+            row-gap: 2rem;
+            padding: 2rem;
+            .project-title {
+                text-align: center;
+                font-size: 1.4rem;
+                border-bottom: 1px solid $light-color;
+                padding-bottom: 2rem;
+            }
+            p {
+                font-size: 1.1rem;
+            }
+        }
+    }
+}
+
+@media (min-width: 768px) {
+    .main-profile {
+        padding-top: 12rem;
+        min-height: calc(100vh - 30.4rem);
+    }
+    .main-profile__section {
+        padding: 3rem;
+    }
+    .main-profile__section__container {
+        @include flexCenter (row, center, center);
+        column-gap: 3rem;
+        img {
+            width: 40%;
+        }
+        .container__div {
+            @include flexCenter (column, center, flex-start);
+            row-gap: 2rem;
+            width: 60%;
+            h2 {
+                font-size: 2.4rem;
+            }
+            p {
+                font-size: 1.4rem;
+            }
+        }
+    }
+    .main-profile__section-2 {
+        padding: 3.4rem 3.4rem 7rem 3.4rem;
+        h3 {
+            font-size: 1.6rem;
+        }
+    }
+    .main-profile__section-2__container {
+        .main-profile__project {
+            .project__text {
+                .project-title {
+                    font-size: 1.6rem;
+                }
+                p {
+                    font-size: 1.2rem;
+                }
+            }
+        }
+    }
+}
+@media (min-width: 1024px) {
+    .main-profile {
+        padding-top: 14rem;
+    }
+    .main-profile__section {
+        padding: 4rem;
+    }
+    .main-profile__section__container {
+        @include flexCenter (row, center, center);
+        img {
+            width: 40%;
+        }
+        .container__div {
+            @include flexCenter (column, center, flex-start);
+            row-gap: 2rem;
+            width: 60%;
+            h2 {
+                font-size: 3.6rem;
+            }
+            p {
+                font-size: 1.6rem;
+            }
+        }
+    }
+    .main-profile__section-2 {
+        padding: 3.4rem 4.4rem 7rem 4.4rem;
+        h3 {
+            font-size: 1.7rem;
+        }
+    }
+    .main-profile__section-2__container {
+        .main-profile__project {
+            .project__text {
+                .project-title {
+                    font-size: 1.7rem;
+                }
+                p {
+                    font-size: 1.3rem;
+                }
+            }
+        }
+    }
+}

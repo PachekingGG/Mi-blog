@@ -1,0 +1,67 @@
+@import "../mixins.scss";
+@import "../variables.scss";
+
+//PRIMARY BUTTON
+.primary-button {
+    @include flexCenter (row, center, center);
+    text-decoration: none;
+    font-family: $roboto;
+    font-weight: 700;
+    font-size: 1.6rem;
+    color: $light-color;
+    width: 12rem;
+    height: 4.8rem;
+    background-color: $primary-color;
+    border: 2px solid $primary-color;
+    color: $dark-color;
+    cursor: pointer;
+    &:hover {
+        border: 2px solid $primary-color;
+        color: $primary-color;
+        background-color: transparent;
+    }
+}
+//TABLET
+@media (min-width: 768px) {
+    .primary-button {
+        font-size: 1.7rem;
+        width: 14rem;
+        height: 5rem;
+
+    }
+}
+
+//DESKTOP
+@media (min-width: 1024px) {
+    .primary-button {
+        font-size: 1.8rem;
+        width: 15rem;
+        height: 5.4rem;
+    }
+}
+
+//SECUNDARY BUTTON
+.secundary-button {
+    @include flexCenter (row, center, center);
+    font-weight: 500;
+    font-size: 1.1rem;
+    border: 1px solid $primary-color;
+    color: $dark-color;
+    background-color: transparent;
+    text-decoration: none;
+    width: 10rem;
+    height: 3.4rem;
+    &:hover {
+        background-color: $primary-color;
+        color: $light-color;
+    }
+}
+
+//DESKTOP
+@media (min-width: 1024px) {
+    .secundary-button {
+        font-size: 1.2rem;
+        width: 12rem;
+        height: 4rem;
+    }
+}
